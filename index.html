@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Circle Layout</title>
+
+<style>
+body {
+    background: #f5e9ff;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container */
+.hero-right {
+    position: relative;
+    width: 800px;
+    margin: 60px auto;
+    height: 450px;
+}
+
+/* Base circle style */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+/* Left circle */
+.circle-left {
+    width: 260px;
+    height: 260px;
+    top: 10px;
+    left: 80px;
+    z-index: 3;
+}
+
+/* Right circle */
+.circle-right {
+    width: 380px;
+    height: 380px;
+    bottom: 0;
+    right: 40px;
+    z-index: 1;
+}
+
+/* Small faint decorative circle */
+.circle-small {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(200,120,255,0.15);
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    z-index: 0;
+}
+
+/* SEMI-ELLIPSE BASE STYLE */
+.ellipse {
+    position: absolute;
+    background: linear-gradient(90deg, #7b00ff, #bf57ff);
+    box-shadow: 0 10px 25px rgba(120,0,200,0.3);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Left ellipse (on left circle) */
+.ellipse-left {
+    width: 230px;
+    height: 140px;
+    left: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 90px 0 0 90px / 70px 0 0 70px;
+    z-index: 10;
+}
+
+/* Right ellipse (on right circle) */
+.ellipse-right {
+    width: 300px;
+    height: 160px;
+    right: -160px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0 100px 100px 0 / 0 80px 80px 0;
+    z-index: 10;
+}
+
+/* Text styles */
+.big {
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 1;
+}
+.text-small {
+    margin-top: -5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+</style>
+
+</head>
+<body>
+
+<div class="hero-right">
+
+    <!-- Left big circle -->
+    <div class="circle circle-left"></div>
+
+    <!-- Left ellipse -->
+    <div class="ellipse ellipse-left">
+        <div class="big">2x</div>
+        <div class="text-small">Faster & Effective Learning<br>Experience</div>
+    </div>
+
+    <!-- Right big circle -->
+    <div class="circle circle-right"></div>
+
+    <!-- Right ellipse -->
+    <div class="ellipse ellipse-right">
+        <div class="big">88%</div>
+        <div class="text-small">Growth in your Daily Life</div>
+    </div>
+
+    <!-- Faint background circle -->
+    <div class="circle-small"></div>
+
+</div>
+
+</body>
+</html>

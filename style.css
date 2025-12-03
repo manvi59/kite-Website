@@ -1,0 +1,280 @@
+/* GLOBAL FONT */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* TOP BLACK BAR */
+.top-offer-bar {
+    background: #000;
+    font-size: 14px;
+}
+.bg {
+    background-color: #7E00A7 ;
+}
+
+.navbar{
+    background-color: #FBF2FF;
+}
+
+
+/* BUTTON STYLES */
+.btns{
+    height: 40px;
+    width: 119px;
+   
+}
+.nav-item{
+     font-size: 14px !important;
+}
+.btn-purple {
+    background-color: #7E00A7 !important;
+    color: white;
+    border-radius: 6px;
+    font-weight: 400;
+}
+
+.btn-outline-purple {
+    border: 2px solid #7E00A7;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.btn-outline-purple:hover {
+    background: #7E00A7;
+    color: white;
+}
+
+/* SEARCH BAR */
+
+.search-bar {
+    position: relative;
+    width: 350px;
+}
+
+.search-bar input {
+    
+    padding-left: 35px;
+    height: 42px;
+    border: 1.5px solid #d6d6d6;
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    font-size: 18px;
+    color: gray;
+    
+}
+
+/* NAV LINKS */
+.nav-link {
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    margin-right: 20px;
+}
+
+/* .nav-link:hover {
+    color: #6C2FDB !important;
+} */
+
+
+
+
+
+/* Hero section background same as navbar */
+.hero-section {
+  background-color: #FBF2FF;
+  min-height: 600px;
+  position: relative;
+  overflow: visible;
+
+}
+
+/* Left hero text */
+.hero-title {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #000;
+  max-width: 455px;
+  line-height: 52px;
+}
+
+.text-purple {
+  color: #7E00A7;
+  font-weight: 700;
+}
+
+/* Button */
+.btn-purples {
+  background-color: #7E00A7;
+  border: none;
+  color: #fff;
+  padding: 0.85rem 2.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  width:206px ;
+  height: 50px;
+ 
+}
+
+.btn-purples:hover {
+  background-color:  #7E00A7;
+  color: #fff;
+}
+
+/* Stats below button */
+.stats-text {
+  color: #7E00A7;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.stat-number {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-weight: 400;
+  font-size: 18px;
+  color: #6A6F73;
+}
+
+/* RIGHT HERO - Circles container */
+.circle-wrapper {
+  width: 265px;
+  height: 263px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 16px rgb(108 47 219 / 0.3);
+  margin-right: 0.6rem;
+
+}
+.circle-1 {
+  z-index: 2;
+  background-image: url("img.jpg");
+}
+
+.circle-2 {
+  width: 375px;
+  height: 374px;
+  z-index: 1;
+  background-image: url("Ellipse\ 5.png");
+}
+
+
+/* SEMI-ELLIPSE BASE STYLE */
+.ellipse {
+    position: absolute;
+    
+    box-shadow: 0 10px 25px #6075C2A6;
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Left ellipse (on left circle) */
+.ellipse-left {
+    width: 239px;
+    height: 130px;
+    background: linear-gradient(90deg, #7E00A7, #FFFFFFFF);
+    left: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 71px ;
+    z-index: 10;
+}
+
+/* Right ellipse (on right circle) */
+.ellipse-right {
+    width: 263px;
+    height: 130px;
+    left: 220px;
+    background: linear-gradient(90deg,#FFFFFFFF, #7E00A7 );
+    top: 350px;
+    transform: translateY(-50%);
+    border-radius:71px;
+    z-index: 10;
+}
+
+/* Text styles */
+.big {
+    font-size: 77px;
+    font-weight: 600;
+    line-height: 100%;
+   
+}
+.text-small {
+   
+    font-size: 12px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* Small faint decorative circle */
+.circle-small {
+    width: 95px;
+    height: 94px;
+    border-radius: 50%;
+    background: #DBC0E57D;
+    position: absolute;
+    top: 200px;
+    left: 162px;
+    z-index: 11;
+    
+}
+
+/* Position the second circle slightly overlapping and bigger */
+
+
+/* Responsive adjustments */
+/* @media (max-width: 991px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .circle-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 0.5rem;
+  }
+
+  .circle-2 {
+    width: 220px;
+    height: 220px;
+    margin-left: -50px;
+  }
+
+  .btn-purple {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .stats-text {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .circle-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle-2 {
+    width: 180px;
+    height: 180px;
+    margin-left: -40px;
+  }
+} */
