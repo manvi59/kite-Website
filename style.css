@@ -847,4 +847,412 @@ body {
       
     }
 
+    /* card section-6 */
    
+  .card{
+    border: 1px solid #7E00A7;
+    border-radius: 10px;
+ 
+  }
+  .card-header{
+    background-color:#7E00A7 ;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  .card-img{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .session-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .viewbtn{
+   border: 1px solid #7E00A7;
+   color: #7E00A7;
+   border-radius: 10px;
+   font-weight: 700;
+   font-size: 1.1rem;
+   padding: 10px 70px !important;
+  }
+
+  .viewbtn:hover {
+    background-color: #7E00A7;
+    color: white;
+
+  }
+
+    .business-goal {
+    font-weight: 400;
+    font-size: 2.5rem;
+  }
+  .business-subtext {
+    color: #585858;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+
+  /* card section-7 */
+  .plan-title{
+   font-weight: 700;
+   font-size: 1.26rem;
+   color: #37436B;
+  }
+  .plan-text{
+   font-weight: 400;
+   font-size: 1rem;
+   color: #454C63;
+  }
+  .planbtn{
+   border: 1px solid #7E00A7;
+   color: #7E00A7;
+   border-radius: 6px;
+   font-weight: 700;
+   font-size: 0.9rem;
+   padding: 10px 70px !important;
+  }
+  .planbtn+h5{
+    font-weight: 700;
+    font-size: 1rem;
+    color: #37436B;
+  }
+  .plan-footer{
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #454C63;
+  }
+  .testipara{
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #7E00A7;
+  }
+  
+/* feedback section-8 */
+.fa{
+  color: #959BAC;
+}
+.feedback-text{
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #454C63;
+  align-items: center;
+  padding: 12px 28px;
+  position: relative;
+ 
+ 
+}
+.feedfoot-text{
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #37436B;
+}
+.feedfoot-subtext{
+  font-weight: 400;
+  font-size: 0.9rem;
+  color:#7E00A7 ;
+}
+.corner-img {
+    position: absolute;
+    top: 0;   
+    right: 45px;  
+    width: 70px !important;  
+}
+
+/* BigImage section-9 */
+.Bgbrand{
+ position: relative;
+ height:750px;
+
+}
+.bigbg-img{
+position: absolute;
+  z-index: 2;
+  right: 88px;
+}
+.bigtop-img{
+  position: absolute;
+  z-index: 1;
+  top: 387px;
+
+}
+
+/* -------------------------- */
+/* RESPONSIVE FIXES */
+/* -------------------------- */
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .Bgbrand{
+    height: 695px;
+  }
+}
+@media (max-width: 1200px){
+   .Bgbrand{
+    height: 530px;
+  }
+}
+@media (max-width: 995px){
+  .Bgbrand{
+    height: 427px;
+  }
+}
+@media (max-width: 768px){
+  .Bgbrand{
+    height: 354px;
+  }
+}
+@media (max-width: 578px){
+  .Bgbrand{
+    height: 300px;
+  }
+}
+
+/* Large Tablets */
+@media (max-width: 1200px){
+  .bigbg-img{
+    right: 40px;     /* reduce right gap */
+    width: 80%;      /* scale down slightly */
+  }
+  .bigtop-img{
+    top: 280px;
+    width: 80%;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px){
+  .bigbg-img{
+    right: 20px;
+    width: 80%;
+  }
+  .bigtop-img{
+    top: 220px;
+    width: 80%;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px){
+  .bigbg-img{
+    right: 0;
+    width: 70%;
+  }
+  .bigtop-img{
+    top: 210px;
+    width: 55%;
+    right: 65px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .bigbg-img{
+    right: 0;
+    width: 90%;
+  }
+  .bigtop-img{
+    top: 170px;
+    width: 90%;
+    right: 65px;
+  }
+}
+
+
+/* Mobile Portrait */
+@media (max-width: 576px){
+  .bigbg-img{
+    right: 0;
+    width: 85%;
+  }
+  .bigtop-img{
+    top: 170px;
+    width: 80%;
+  }
+}
+@media (max-width: 500px){
+  .bigbg-img{
+    right: 0;
+    width: 85%;
+  }
+  .bigtop-img{
+    top: 145px;
+    width: 80%;
+  }
+}
+
+
+
+/* Small Phones */
+@media (max-width: 420px){
+  .bigbg-img{
+    width: 95%;
+  }
+  .bigtop-img{
+    top: 150px;
+    width: 75%;
+  }
+}
+
+.brands{
+  background-color: #FDF9FF;
+}
+.brand-para{
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #454C63;
+}
+
+.latestpara{
+  font-weight:400;
+  font-size: 1.5rem;
+  color:#7E00A7 ;
+}
+.latest-goal{
+  font-weight:400 ;
+  font-size: 2.4rem;
+}
+.span-text{
+  font-weight: 700;
+  font-size: 2.4rem;
+  color:#7E00A7 ;
+}
+
+/* card section-10 */
+.Education-card{
+  border-radius: 14px;
+  padding: 15px;
+}
+.Education-img{
+    width: 100%;
+   
+    border-radius: 14px;
+    object-fit: cover;
+}
+.Education-para{
+  font-weight: 400;
+  font-size: 1rem;
+  color: #454C63;
+}
+.Education-body{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.Education-date{
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #959BAC;
+}
+.readbtns{
+    border: 0.5px solid #7E00A7;
+   color: #7E00A7;
+   border-radius: 6px;
+   font-weight: 500;
+   font-size: 0.99rem;
+  width: fit-content;
+}
+
+
+
+/* Q/A section-11 */
+.accordion-item{
+  background-color: #FDF9FF !important;
+   border: none;
+}
+.accordion-item .accordion-button {
+      background: #FDF9FF; 
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: #37436B;
+    }
+
+.faq-arrow {
+  color: #7E00A7;
+  transition: transform .3s ease;
+  font-size: 18px;
+}
+.accordion-button:not(.collapsed) .faq-arrow {
+    transform: rotate(180deg);
+}
+.accordion-button::after {
+    display: none !important;
+}
+
+
+/* Moreinfo section-13 */
+/* MAIN SECTION */
+.instructor-section {
+  background: #7E00A7;         /* purple background */
+  
+}
+.small{
+  font-weight:400 ;
+  font-size: 1.4rem;
+}
+.large{
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+/* BUTTON */
+.for-more-btn {
+  background: white;
+  color: #7E00A7;
+  padding: 10px 70px;
+  font-weight: 400;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  box-shadow: 7px 12px 28px #000000;
+  z-index: 3;
+  position: relative;
+}
+
+/* ARROW IMAGE POSITION */
+.arrow-img {
+  position: absolute;
+  left: -25%;        /* pushes arrow left of button */
+  top: 50%;
+  transform: translateY(-50%);
+  
+  z-index: 1;
+  
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 1100px) {
+  .arrow-img {
+   
+    top: -24px;
+    transform: translateX(50%);
+    max-width: 160px;
+  }
+
+  .for-more-btn {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 936px) {
+  .arrow-img {
+   left:-155px;
+    top: -51px; 
+  }
+}
+
+@media (max-width: 770px) {
+  .arrow-img {
+   left:-44px;
+    top: -51px; 
+  }
+}
+
+
+@media (max-width: 576px) {
+  .arrow-img {
+    top: -36px;
+    max-width: 140px;
+  }
+}

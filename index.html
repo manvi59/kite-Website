@@ -3,203 +3,163 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hero - Phone Showcase</title>
+  <title>FAQ List - Styled Accordion</title>
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Font Awesome (for small arrows if desired) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <!-- Font Awesome for chevrons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+ 
   <style>
-    :root {
-      --purple: #7E00A7;
-      --white: #ffffff;
-      --muted-white: rgba(255,255,255,0.95);
-    }
+.contact-section {
+  position: relative;
+}
+.contact-text{
+font-weight: 700;
+font-size: 2.4rem;
+color: black;
+}
 
-    /* SECTION BASE */
-    .phone-hero {
-      background-color: var(--purple);
-      /* background image (vector lines) placed at right */
-      background-image: url('vector2.png');
-      background-repeat: no-repeat;
-      background-position: right center;
-      /* use contain so it doesn't tile and scales nicely; adjust if you prefer cover */
-      background-size: auto 80%;
-      color: var(--white);
-      padding-top: 48px;
-      padding-bottom: 48px;
-      overflow: hidden;
-      position: relative;
-    }
+/* Form Inputs */
+.custom-input, .custom-textarea {
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #454C63;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
 
-    /* container inner spacing so content sits like screenshot */
-    .phone-hero .container {
-      position: relative;
-      z-index: 2;
-    }
+.submit-btn {
+  background: #7E00A7;
+  color: white;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 1px solid #454C63;
+}
+.submit-btn:hover{
+  background: #7E00A7;
+  color: white;
+}
 
-    /* LEFT TEXT BLOCK */
-    .hero-left {
-      padding: 40px 1rem;
-    }
+/* Image Styling */
+.contact-img {
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  z-index: 3;
+  object-fit: cover;
+  
+}
 
-    .hero-left .eyebrow {
-      font-weight: 700;
-      opacity: 0.95;
-    }
+/* Purple Decorative Shapes */
+.purple-shape-under {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  z-index: 1;
+}
 
-    .hero-heading {
-      font-size: 2.1rem;
-      font-weight: 800;
-      line-height: 1.05;
-      margin: 12px 0 24px;
-      max-width: 520px;
-    }
+.purple-shape-top {
+  position: absolute;
+  right: 20%;
+  bottom: 22px;
+  z-index: 2;
+}
 
-    /* list items on left */
-    .features-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      max-width: 420px;
-    }
+@media (min-width: 992px) and (max-width: 1400px) {
+  .contact-img {
+    height: 430px;
+    object-fit: cover; /* optional – image stretching avoid karega */
+  }
+  .purple-shape-top{
+    right: 113px;
+  }
+}
 
-    .features-list li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 10px 0;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: rgba(255,255,255,0.95);
-    }
+/* Tablets */
+@media (max-width: 992px) {
+  .purple-shape-top img,
+  .purple-shape-under img {
+    width: 70%;
+  }
+  .purple-shape-top {
+    right: 20px;
+    bottom: 10px;
+  }
+}
 
-    /* small triangle/chevron on the right of each row (like screenshot) */
-    .features-list li::after {
-      content: "\f105"; /* FontAwesome chevron-right */
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      margin-left: auto;
-      color: rgba(255,255,255,0.95);
-      font-size: 0.9rem;
-    }
+/* Mobile */
+@media (max-width: 768px) {
+  .image-wrapper {
+    margin-top: 20px;
+  }
 
-    /* RIGHT PHONE IMAGE WRAPPER */
-    .phone-wrap {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      min-height: 320px;
-    }
+  .purple-shape-under,
+  .purple-shape-top {
+    display: none; /* hide shapes to prevent overlapping on mobile */
+  }
 
-    .phone-image {
-      /* default: scaled for medium screens */
-      width: 320px;
-      max-width: 90%;
-      display: block;
-      transform: translateY(0);
-      /* slight shadow for depth */
-      box-shadow: 0 18px 40px rgba(0,0,0,0.25);
-      border-radius: 28px;
-      background: white; /* in case phone has transparent background */
-    }
+  .contact-text {
+    text-align: center;
+  }
+}
 
-    /* decorative circle / accent behind phone (optional, mirrors screenshot style) */
-    .phone-hero .accent-circle {
-      position: absolute;
-      right: 6%;
-      top: 12%;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      border: 6px solid rgba(255,255,255,0.06);
-      z-index: 1;
-      pointer-events: none;
-    }
+/* Extra small mobile */
+@media (max-width: 576px) {
+  .contact-text {
+    font-size: 1.6rem;
+  }
+}
 
-    /* RESPONSIVE TUNING */
-    /* Large screens - make phone larger and slightly offset upward */
-    @media (min-width: 992px) {
-      .phone-image { width: 420px; }
-      .hero-heading { font-size: 2.6rem; }
-      .phone-hero { background-size: auto 90%; }
-      .phone-hero .accent-circle { right: 8%; top: 6%; width: 320px; height: 320px; border-width: 8px; }
-    }
 
-    /* Extra large */
-    @media (min-width: 1400px) {
-      .phone-image { width: 520px; }
-      .hero-heading { font-size: 3rem; max-width: 640px; }
-    }
 
-    /* Tablet / small desktop: keep phone proportion and reduce background image size */
-    @media (min-width: 768px) and (max-width: 991.98px) {
-      .phone-image { width: 380px; }
-      .phone-hero { background-size: auto 70%; background-position: right 20% center; }
-    }
 
-    /* Mobile: stack, shrink text and phone */
-    @media (max-width: 767.98px) {
-      .phone-hero {
-        padding-top: 36px;
-        padding-bottom: 36px;
-        background-size: auto 55%;
-        background-position: right 60% center;
-      }
-      .hero-heading { font-size: 1.6rem; text-align: left; }
-      .features-list li { font-size: 1rem; }
-      .phone-image { width: 240px; margin-top: 18px; }
-      .phone-hero .accent-circle { display: none; }
-      .hero-left { padding: 18px 1rem; }
-    }
-
-    /* small adjustment to ensure left content has breathing room on very wide screens */
-    @media (min-width: 1600px) {
-      .hero-left { padding-left: 8rem; }
-    }
-  </style>
+  </style> 
 </head>
 <body>
+<section class="contact-section py-5">
+  <div class="container">
+    <h4 class="contact-text mb-4">Get in Touch</h4>
+    <div class="row align-items-center g-5">
+         
+      <!-- LEFT FORM -->
+      <div class="col-12 col-md-6">
+        
 
-  <!-- HERO -->
-  <section class="phone-hero">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- LEFT -->
-        <div class="col-12 col-md-6 hero-left">
-          <div class="eyebrow">Improve 3x faster than traditional methods</div>
+        <form>
+          <input type="text" class="form-control mb-3 custom-input" placeholder="Your Name">
+          <input type="text" class="form-control mb-3 custom-input" placeholder="Phone Number">
+          <input type="email" class="form-control mb-3 custom-input" placeholder="Email">
 
-          <h1 class="hero-heading">
-            Learn from anywhere and build your <span style="color:#fff; font-weight:900;">bright career.</span>
-          </h1>
+          <textarea class="form-control mb-5 custom-textarea" rows="4" placeholder="Your Text"></textarea>
 
-          <ul class="features-list">
-            <li>Learn from experts</li>
-            <li>Choose your time</li>
-            <li>Schedule your session</li>
-            <li>Get into real conversation</li>
-          </ul>
-        </div>
-
-        <!-- RIGHT -->
-        <div class="col-12 col-md-6">
-          <div class="phone-wrap">
-            <!-- optional accent circle to mirror screenshot -->
-            <div class="accent-circle" aria-hidden="true"></div>
-
-            <!-- replace 'phone.png' with your file; keep same sizing -->
-            <img src="phone.png" alt="Phone preview" class="phone-image">
-          </div>
-        </div>
+          <button class="btn submit-btn w-100">Submit</button>
+        </form>
       </div>
-    </div>
-  </section>
 
-  <!-- Bootstrap 5 JS -->
+      <!-- RIGHT IMAGE -->
+      <div class="col-12 col-md-6 ">
+        <!-- Decorative Shapes -->
+        <div class="purple-shape-under">
+          <img src="./images/Vector 3.png" alt="" class="img-fluid">
+        </div>
+        <div class="purple-shape-top">
+          <img src="./images/Vector 4.png" alt="" class="img-fluid">
+        </div>
+
+        <!-- Image -->
+        <img src="./images/digital-tablet-stylus-pen-laptop-desktop-close-up 1.png" class="img-fluid  contact-img" alt="">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
