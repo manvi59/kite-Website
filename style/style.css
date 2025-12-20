@@ -403,3 +403,43 @@ color: var(--title-color);
     justify-content: center;
   }
 }
+
+.profile-name{
+  font-family: var(--font);
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;
+
+}  
+
+.course-title{
+  font-family: var(--font);
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+color: var(--title-color);
+
+}
+
+.course-content{
+  font-family:var(--font);
+font-weight: 400;
+font-style: Regular;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: 0%;
+color: var(--text-color);
+
+}
+
+.course-box{
+  background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #F5DCFE 100%);
+border-radius: 10px;
+}
